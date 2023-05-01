@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* primary colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --darker-cyan: hsl(179, 100%, 13%);
+
+  /* neutral colors */
+  --white-75: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+  --decorative-text: 'Big Shoulders Display', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body,
+.main_component,
+.card {
+  display: grid;
+}
+
+body {
+  background-color: var(--light-gray);
+  min-height: 100vh;
+  place-items: center;
+  padding: 1rem;
+}
+
+.main_component {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 3em;
+  gap: 2rem;
+}
+
+.card__heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: var(--decorative-text);
+  color: var(--light-gray);
+}
+
+.card__desc {
+  color: var(--white-75);
+}
+
+.card__btn {
+  background-color: var(--light-gray);
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  padding: 0.75em 2em;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.card__btn:hover {
+  background-color: var(--white-75);
+}
+
+.card__btn:active {
+  border: 1px solid var(--light-gray);
+  background-color: transparent;
+  color: var(--light-gray);
+}
+
+.sedan__btn__color {
+  color: var(--bright-orange);
+}
+
+.suv__btn__color {
+  color: var(--dark-cyan);
+}
+
+.luxury__btn__color {
+  color: var(--darker-cyan);
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--darker-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 750px) {
+  body {
+    max-width: 1440px;
+  }
+  .main_component {
+    max-width: 900px;
+    display: flex;
+  }
+
+  .card__btn {
+    margin-top: 5rem;
+  }
+}
